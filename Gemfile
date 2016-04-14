@@ -50,3 +50,8 @@ end
 
 
 gem "devise"
+
+gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+gem 'furatto', github: "IcaliaLabs/furatto-rails"
+gem 'font-awesome-rails'
+gem 'simple_form'
