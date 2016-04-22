@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Api::V1::UsersController do
   describe "GET #show" do
-    before(:each) do
+    before(:each) do 
       @user = FactoryGirl.create :user
       get :show, id: @user.id
     end
@@ -13,6 +13,12 @@ describe Api::V1::UsersController do
     end
 
     it { should respond_with 200 }
+
+    it "has the product ids as an embeded object" do
+      user_response = json_response[:user]
+      expect(user_response[:product_ids]).to eql []
+    end
+
   end
 
   describe "POST #create" do
