@@ -4,9 +4,9 @@ describe Api::V1::SessionsController do
 
   describe "POST #create" do
 
-   before(:each) do
-    @user = FactoryGirl.create :user
-   end
+     before(:each) do
+      @user = FactoryGirl.create :user
+     end
 
     context "when the credentials are correct" do
 
