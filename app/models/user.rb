@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   before_validation :downcase_email
   before_create :generate_authentication_token!
+
+  has_many :products, dependent: :destroy
   validates :auth_token, uniqueness: true
   validates :email, uniqueness: true
   # Include default devise modules. Others available are:

@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled 
+406882ff30528687fa6f5dace2e8265029cd7dd8 refs/heads/compass-fix
+e433e9120214ca9b05ca52915db9f5ed5cae526a refs/heads/feature/code_climate
+4384dbbcb677c623d8f0f99a65f61a42a8da22d2 refs/heads/gh-pages
+12833812b1625f5aaad69e0a2ce5f11a3cf2acbc refs/heads/hotfix/field-class-override
+1975ff9da9504853d517710ea092b1b6e7b5d4e3 refs/heads/master
+2d2918c4af319e495a0ab75dffa98279ea1fb0d4 refs/heads/v1.0.0
+978ff4a17f4ae688fa0e1c3dad5520a86d42ebef refs/tags/v1.0.0
+^2d2918c4af319e495a0ab75dffa98279ea1fb0d4

@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled 
+fec76c1e3043258541a9c98a1722f0cf96856d77 refs/heads/Lazarus404-master
+b39cf5a0d3d44435273ae35e8a7cec99020a1366 refs/heads/dev
+b60fb7d08889eb4c67647799fd2fd1429f95d64d refs/heads/gh-pages
+eabfae3287e10699671c333d535d9d8152544ab4 refs/heads/master
