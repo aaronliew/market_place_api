@@ -42,7 +42,7 @@ group :development, :test do
 end
 
 group :test do
-
+  gem 'email_spec'
   gem "factory_girl_rails"
   gem 'ffaker'
   gem "shoulda-matchers", require: false
