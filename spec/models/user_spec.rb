@@ -16,6 +16,7 @@ describe User do
   it { should respond_to(:auth_token) }
 
   it { should have_many(:products) }
+  it { should have_many(:orders) }
   it { should be_valid }
   # it { should validate_uniqueness_of(:email) }
   it { should validate_uniqueness_of(:auth_token)}
