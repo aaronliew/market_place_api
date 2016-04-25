@@ -11,7 +11,8 @@ MarketPlaceApi::Application.routes.draw do
     # We are going to list our resources here
       resources :users, :only => [:show, :create, :update, :destroy] do
         # this is the line
-        resources :products, :only => [:create, :update, :destroy]
+          resources :products, :only => [:create, :update, :destroy]
+          resources :orders, :only => [:index]
       end
       resources :sessions, :only => [:create, :destroy]
       resources :products, :only => [:show, :index]
