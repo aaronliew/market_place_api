@@ -81,7 +81,6 @@ GEM
       compass (~> 1.0.0)
       sass-rails (< 5.1)
       sprockets (< 2.13)
-    concurrent-ruby (1.0.1)
     devise (4.0.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -221,7 +220,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers
+  active_model_serializers (= 0.9.5)
   coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails
