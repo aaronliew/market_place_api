@@ -22,8 +22,7 @@ describe Api::V1::ProductsController do
 
   describe "GET #index" do
     before(:each) do
-      4.times { FactoryGirl.create :product }
-      get :index
+      4.times { FactoryGirl.create :product } 
     end
 
     context "when is not receiving any product_ids parameter" do
@@ -38,11 +37,17 @@ describe Api::V1::ProductsController do
 
       it "returns the user object into each product" do
         products_response = json_response[:products]
-
         products_response.each do |product_response|
           expect(product_response[:user]).to be_present
         end
       end
+
+      # we added this lines for the pagination
+      it { expect(json_response).to have_key(:meta) }
+      it { expect(json_response[:meta]).to have_key(:pagination) }
+      it { expect(json_response[:meta][:pagination]).to have_key(:per_page) }
+      it { expect(json_response[:meta][:pagination]).to have_key(:total_pages) }
+      it { expect(json_response[:meta][:pagination]).to have_key(:total_objects) }
 
       it { should respond_with 200 }
     end
@@ -61,9 +66,6 @@ describe Api::V1::ProductsController do
         end
       end
     end
-
-
-    it { should respond_with 200 }
   end
 
   describe "POST #create" do
