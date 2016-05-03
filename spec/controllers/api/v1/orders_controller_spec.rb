@@ -14,8 +14,12 @@ describe Api::V1::OrdersController do
       expect(orders_response).to have(4).items
     end
 
+    # These lines are the ones added to test the pagination
+	it_behaves_like "paginated list"
+
     it { should respond_with 200 }
   end
+
 
    #line 20
    describe "GET #show" do
