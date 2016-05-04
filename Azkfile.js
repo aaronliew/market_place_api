@@ -141,7 +141,7 @@ systems({
       // https://github.com/azukiapp/docker-deploy-digitalocean/blob/master/README.md
       BOX_NAME: 'ubuntu-512mb-sgp1-01',
       BOX_REGION: 'sgp1',
-      GIT_REF: 'login',
+      GIT_REF: 'master',
       BOX_SIZE: '512mb',
       AZK_RESTART_COMMAND: 'azk restart -Rvv',
     }
