@@ -6,7 +6,7 @@ systems({
   // production version
   'market-place-api': {
     depends: ['mysql'],
-    image: { docker: 'azukiapp/ruby:2.2' },
+    image: { docker: 'azukiapp/ruby:2.3.0' },
     provision: [
       '[ -e .env ] || cp .env.example .env',
       'bundle install --path /azk/bundler --without development test',
@@ -88,7 +88,7 @@ systems({
     export_envs: {
       // check this gist to configure your database
       // https://gist.github.com/gullitmiranda/62082f2e47c364ef9617
-      DATABASE_URL: 'mysql2://#{envs.MYSQL_USER}:#{envs.MYSQL_PASS}@#{net.host}:#{net.port.data}/${envs.MYSQL_DATABASE}',
+      DATABASE_URL: 'mysql2://#{envs.MYSQL_USER}:#{envs.MYSQL_PASS}@#{net.host}:#{net.port.data}/#{envs.MYSQL_DATABASE}',
     },
   },
 
@@ -141,7 +141,7 @@ systems({
       // https://github.com/azukiapp/docker-deploy-digitalocean/blob/master/README.md
       BOX_NAME: 'ubuntu-512mb-sgp1-01',
       BOX_REGION: 'sgp1',
-      GIT_REF: 'master',
+      GIT_REF: 'login',
       BOX_SIZE: '512mb',
       AZK_RESTART_COMMAND: 'azk restart -Rvv',
     }
